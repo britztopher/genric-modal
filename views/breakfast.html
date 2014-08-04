@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel='stylesheet' href='../bower_components/bootstrap/dist/css/bootstrap.css' type='text/css'/>
+    <link rel='stylesheet' href="../style.css"/>
+</head>
+<body ng-controller="BreakfastCtrl">
+
+    <div class="row">
+        <div class="col-lg-6 col-lg-offset-3">
+
+            <h1>What I had for Breakfast</h1>
+            <ul>
+                <li>
+                    <h3>
+                        <my-modal name='RedBull' instance_template="redbull" use_ctrl="RedBullCtrl">
+                            RedBull
+                        </my-modal>
+                    </h3>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/angular-ui-bootstrap-bower/ui-bootstrap-tpls.min.js"></script>
+    <script src="../directives/directives.js"></script>
+    <script src="../app.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+    "name": "generic-modal",
+    "dependencies": {
+        "angular": "1.2.21",
+        "angular-animate": "1.2.21",
+        "angular-ui-bootstrap-bower": "0.10.0",
+        "bootstrap": "~3.1.1"
+    }
+}
