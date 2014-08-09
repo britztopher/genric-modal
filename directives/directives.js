@@ -32,13 +32,12 @@ module.directive('myModal', function($modal){
         template: '<a ng-click="open()" ng-transclude>{{name}}</a>',
         scope: {
             useCtrl: "@",
-            author: "@",
-            emailTo: "@"
+            email: "@"
         },
         link: function(scope, element, attrs) {
 
             console.log('Attrs: ', attrs);
-//            console.log('SCOPE: ', scope);
+//            console.log('SCOPE: ', scope);Z
 
             scope.open = function(){
 
@@ -51,7 +50,7 @@ module.directive('myModal', function($modal){
                     backdrop: true,
                     resolve: {
                         custEmail: function(){
-                            return {author: scope.author, emailTo: scope.emailTo};
+                            return {email: scope.email};
                         }
                     }
 
@@ -67,7 +66,9 @@ module.directive('myModal', function($modal){
     };
 });
 
-module.controller('RedBullCtrl', function($scope, $modalInstance){
+module.controller('RedBullCtrl', function($scope, $modalInstance, custEmail){
+    //add the scop
+    $scope.custEmail = custEmail;
 
     $scope.ok = function(){
         $modalInstance.close();

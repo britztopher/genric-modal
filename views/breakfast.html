@@ -8,6 +8,7 @@
 </head>
 <body ng-controller="BreakfastCtrl">
 
+    <!--using twitter bootstrap for its grid layout-->
     <div class="row">
         <div class="col-lg-6 col-lg-offset-3">
 
@@ -15,8 +16,28 @@
             <ul>
                 <li>
                     <h3>
-                        <my-modal name='RedBull' instance_template="redbull" use_ctrl="RedBullCtrl">
-                            RedBull
+                        <!--add the modal instance controller with that will use the redbull.tpl.html as a template and
+                        RedBullCtrl as its controller-->
+                        <my-modal name='RedBull' email="breakfast@redbull.com" instance_template="redbull" use_ctrl="RedBullCtrl">
+                            RedBull <!--because of transclusion this will be included inside of the anchor tag in the directive's transcusion tag -->
+                        </my-modal>
+                    </h3>
+                </li>
+                <li>
+                    <h3>
+                        <!--add the modal instance controller with that will use the coffee.tpl.html as a template and
+                        RedBullCtrl as its controller, note the same controller as listed above.  Reuse is goooood :)-->
+                        <my-modal name='Coffee' email="coffee@redbull.com" instance_template="coffee" use_ctrl="RedBullCtrl">
+                            Coffee<!--because of transclusion this will be included inside of the anchor tag in the directive's transcusion tag -->
+                        </my-modal>
+                    </h3>
+                </li>
+                <li>
+                    <h3>
+                        <!--add the modal instance controller with that will use the redbull.tpl.html as a template and
+                        RedBullCtrl as its controller-->
+                        <my-modal name='Candy Bar' email="dentistsoon@redbull.com" instance_template="candybar" use_ctrl="RedBullCtrl">
+                            Candy Bar <!--because of transclusion this will be included inside of the anchor tag in the directive's transcusion tag -->
                         </my-modal>
                     </h3>
                 </li>
